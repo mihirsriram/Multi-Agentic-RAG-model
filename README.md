@@ -111,13 +111,4 @@ Enter stock ticker (if applicable):
 2. Create a new branch for your feature.
 3. Submit a pull request with a clear description of your changes.
 
----
-
-## License
-This project is licensed under the MIT License. See `LICENSE` for details.
-
----
-
-## Contact
-For questions or support, please contact [Your Name] at [Your Email].
 
