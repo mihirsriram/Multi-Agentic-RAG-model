@@ -1,0 +1,17 @@
+langchain 
+langgraph 
+cassio
+langchain_community
+langchain_community 
+tiktoken 
+langchain-groq 
+langchainhub 
+chromadb 
+langchain
+langgraph 
+langchain_huggingface
+arxiv 
+wikipedia
+polygon
+typing
+IPython
