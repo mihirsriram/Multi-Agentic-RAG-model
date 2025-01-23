@@ -1,5 +1,6 @@
 import os
 import logging
+import streamlit as st
 from langchain_community.tools.polygon import PolygonAPIWrapper
 from langchain_groq import ChatGroq
 from langchain.schema import Document
@@ -111,9 +112,26 @@ def agent(question: str, ticker: str = None):
     else:
         return "Invalid question or missing ticker for stock data retrieval."
 
-# Example usage
+# Streamlit UI
+def main():
+    st.title("Multi-Agent System: Stock Data, Insights & Summaries")
+
+    # Input for question
+    question = st.text_input("Enter your question:")
+
+    # Input for ticker (if applicable)
+    ticker = None
+    if "stock" in question.lower():
+        ticker = st.text_input("Enter stock ticker (if applicable):")
+    
+    # Submit button
+    if st.button("Submit"):
+        if question:
+            response = agent(question, ticker)
+            st.write("Response:")
+            st.write(response)
+        else:
+            st.warning("Please enter a question.")
+
 if __name__ == "__main__":
-    question = input("Enter your question: ")
-    ticker = input("Enter stock ticker (if applicable): ")
-    response = agent(question, ticker)
-    print(response)
+    main()
